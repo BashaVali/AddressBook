@@ -15,7 +15,8 @@ namespace AddressBook
                 Console.WriteLine("Select 1.To Create Contact " + "\n" + 
                     "2.To Edit Contact" + " \n" + 
                     "3.To Delete Contact" + " \n"+
-                    "4.Exit");
+                    "4.To Create Dictionary" + "\n"+
+                    "5.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -24,14 +25,18 @@ namespace AddressBook
                         create.Display();
                         break;
                     case 2:
-                        create.EditContact("String");
+                        create.EditContact();
                         create.Display();
                         break;
                     case 3:
-                        create.DeleteContact("String");
+                        create.DeleteContact();
                         create.Display();
                         break;
                     case 4:
+                        create.CreateDictionary();
+                        create.Display();
+                        break;
+                    case 5:
                         flag = false;
                         break;
                 }
